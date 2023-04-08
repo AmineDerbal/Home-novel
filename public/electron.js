@@ -11,7 +11,7 @@ const createWindow = () => {
     },
   });
   mainWindow.loadURL(`${app.getAppPath()}\\build\\index.html`);
-  mainWindow.webContents.openDevTools();
+  mainWindow.webContents.openDevTools({ mode: 'detach' });
 };
 
 app.whenReady().then(() => {
