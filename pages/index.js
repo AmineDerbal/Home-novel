@@ -1,5 +1,5 @@
 import React from 'react';
-import Url from './components/Url';
+import Url from '../src/components/Url';
 
 const Home = () => (
   <>
