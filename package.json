@@ -21,8 +21,6 @@
     "dev": "next dev",
     "start": "next start",
     "build": "next build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
     "electron": "electron ."
   },
   "eslintConfig": {
