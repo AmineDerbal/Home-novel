@@ -1,11 +1,25 @@
 import React, { useState } from 'react';
-// import getData from '../services/gerUrlData';
 
 const Url = () => {
   const [url, setUrl] = useState('');
-  const handleClick = () => {
-    // console.log(getData());
-    console.log('hello');
+  const handleClick = async () => {
+    console.log('url of url page', url);
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        url,
+      }),
+    };
+    const urlStream = await fetch('/api/download', options);
+    const urlData = await urlStream.json();
+    if (urlData) {
+      console.log('it works');
+    } else {
+      console.log("it doesn't");
+    }
   };
   return (
     <div className="input-url">
